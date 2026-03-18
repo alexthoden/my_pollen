@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollen Tracker - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Pollen Tracker Dashboard</h1>
+            <p class="subtitle">Monitor Pollen Levels & Track Your Symptoms</p>
+        </header>
+
+        <nav class="navigation">
+            <button class="nav-btn active" data-section="overview">Overview</button>
+            <button class="nav-btn" data-section="symptoms">Symptom Log</button>
+            <button class="nav-btn" data-section="pollen">Pollen Data</button>
+            <button class="nav-btn" data-section="analysis">Analysis</button>
+            <button class="nav-btn" data-section="settings">Settings</button>
+        </nav>
+
+        <!-- OVERVIEW SECTION -->
+        <section id="overview" class="section active">
+            <h2>Dashboard Overview</h2>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Today's Symptoms</h3>
+                    <div class="stat-large" id="today-symptoms">0</div>
+                    <p>Reports logged today</p>
+                </div>
+                <div class="card">
+                    <h3>Average Severity</h3>
+                    <div class="stat-large" id="avg-severity">-</div>
+                    <p>Last 7 days (0-3 scale)</p>
+                </div>
+                <div class="card">
+                    <h3>Data Points</h3>
+                    <div class="stat-large" id="data-points">0</div>
+                    <p>Total pollen records</p>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h3>7-Day Symptom Trend</h3>
+                <div id="symptom-trend-chart" style="height: 300px;"></div>
+            </div>
+        </section>
+
+        <!-- SYMPTOMS SECTION -->
+        <section id="symptoms" class="section">
+            <h2>Log Symptoms</h2>
+            
+            <div class="form-container">
+                <form id="symptom-form">
+                    <div class="form-group">
+                        <label for="period">Time of Day:</label>
+                        <select id="period" name="period" required>
+                            <option value="morning">Morning</option>
+                            <option value="afternoon">Afternoon</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location (optional):</label>
+                        <input type="text" id="location" name="location" placeholder="e.g., Office, Park, Home" maxlength="50">
+                        <small>Will be used to query pollen data for your location</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="severity">Severity (0-3):</label>
+                        <div class="slider-container">
+                            <input type="range" id="severity" name="severity" min="0" max="3" value="0">
+                            <span id="severity-display">0</span>
+                        </div>
+                        <div class="scale-labels">
+                            <span>None</span>
+                            <span>Mild</span>
+                            <span>Moderate</span>
+                            <span>Severe</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Symptoms Experienced:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="symptom" value="Sneezing"> Sneezing</label>
+                            <label><input type="checkbox" name="symptom" value="Runny Nose"> Runny Nose</label>
+                            <label><input type="checkbox" name="symptom" value="Nasal Congestion"> Nasal Congestion</label>
+                            <label><input type="checkbox" name="symptom" value="Itchy Eyes"> Itchy Eyes</label>
+                            <label><input type="checkbox" name="symptom" value="Watery Eyes"> Watery Eyes</label>
+                            <label><input type="checkbox" name="symptom" value="Cough"> Cough</label>
+                            <label><input type="checkbox" name="symptom" value="Itchy Throat"> Itchy Throat</label>
+                            <label><input type="checkbox" name="symptom" value="Fatigue"> Fatigue</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notes:</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Any additional details..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Report</button>
+                </form>
+            </div>
+
+            <div class="card full-width">
+                <h3>Today's Reports</h3>
+                <div id="today-reports" class="reports-list">
+                    <p class="text-center">No reports logged yet today</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POLLEN DATA SECTION -->
+        <section id="pollen" class="section">
+            <h2>Pollen Data</h2>
+            
+            <div class="button-group">
+                <button id="fetch-pollen-btn" class="btn btn-primary">Fetch Current Pollen Data</button>
+            </div>
+
+            <div class="card full-width">
+                <h3>Current Pollen Levels</h3>
+                <div id="pollen-chart" style="height: 400px;"></div>
+            </div>
+
+            <div class="card full-width">
+                <h3>Recent Pollen Records</h3>
+                <div id="pollen-records" class="records-list">
+                    <p class="text-center">No pollen data available</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANALYSIS SECTION -->
+        <section id="analysis" class="section">
+            <h2>Allergen Analysis</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Model Status</h3>
+                    <div id="model-status">
+                        <p>Loading...</p>
+                    </div>
+                    <button id="train-model-btn" class="btn btn-secondary" style="margin-top: 10px;">Train Model</button>
+                </div>
+                <div class="card">
+                    <h3>Quick Stats</h3>
+                    <div id="quick-stats">
+                        <p>Total symptom reports: <strong id="total-reports">0</strong></p>
+                        <p>Data range: <strong id="date-range">N/A</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h3>Allergen Profile</h3>
+                <div id="allergen-profile" class="profile-list">
+                    <p class="text-center">Model not trained yet. Collect more data to analyze correlations.</p>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h3>Symptom Severity Over Time</h3>
+                <div id="severity-chart" style="height: 400px;"></div>
+            </div>
+        </section>
+
+        <!-- SETTINGS SECTION -->
+        <section id="settings" class="section">
+            <h2>Settings & Data Management</h2>
+            
+            <div class="card">
+                <h3>Location</h3>
+                <p>Current location: Washington DC (38.9072°N, -77.0369°W)</p>
+                <p class="text-muted">Location customization coming soon</p>
+            </div>
+
+            <div class="card">
+                <h3>Data Management</h3>
+                <div class="button-group">
+                    <button id="export-data-btn" class="btn btn-secondary">Export All Data</button>
+                    <button id="clear-data-btn" class="btn btn-danger">Clear All Data</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Information</h3>
+                <p><strong>Pollen Tracker</strong> v1.0</p>
+                <p>Uses Google Pollen API and machine learning to track pollen levels and symptoms correlation.</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Pollen Tracker - Personal Allergen Monitoring</p>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
