@@ -20,8 +20,8 @@ print("[SETUP] Environment variables loaded from .env")
 
 # Import src modules
 from src.collect_pollen import (
-    collect_daily_pollen, get_latest_forecast, get_pollen_history, 
-    get_forecast, get_legacy_pollen_data, test_api_connection
+    collect_daily_pollen, get_latest_forecast, get_latest_pollen_data,
+    get_pollen_history, get_forecast, get_legacy_pollen_data, test_api_connection
 )
 from src.collect_symptoms import log_symptoms, get_symptoms_for_date, get_latest_symptoms
 from src.build_dataset import build_dataset

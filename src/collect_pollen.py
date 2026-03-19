@@ -300,6 +300,16 @@ def get_pollen_history(days=30):
     
     return recent_history
 
+def get_latest_pollen_data():
+    """
+    Get the latest pollen data (from forecast or history).
+    Alias for compatibility with forecast_analysis module.
+    
+    Returns:
+        Latest pollen forecast data
+    """
+    return get_latest_forecast()
+
 def get_legacy_pollen_data():
     """
     Get all legacy pollen data from my_pollen.json.
