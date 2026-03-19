@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from datetime import datetime
-from src.collect_pollen import get_pollen_forecast
 from src.collect_symptoms import log_symptoms, get_symptoms_for_date
 from src.predict import predict_symptoms, get_allergen_risk_factors
 import threading

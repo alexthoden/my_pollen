@@ -278,288 +278,6 @@
             "displayName": "Ragweed"
           }
         ]
-      }
-    ]
-  },
-  {
-    "regionCode": "US",
-    "dailyInfo": [
-      {
-        "date": {
-          "year": 2026,
-          "month": 3,
-          "day": 18
-        },
-        "pollenTypeInfo": [
-          {
-            "code": "GRASS",
-            "displayName": "Grass"
-          },
-          {
-            "code": "TREE",
-            "displayName": "Tree",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "healthRecommendations": [
-              "Pollen levels are very low right now. It's a great day to enjoy the outdoors!"
-            ]
-          },
-          {
-            "code": "WEED",
-            "displayName": "Weed"
-          }
-        ],
-        "plantInfo": [
-          {
-            "code": "MAPLE",
-            "displayName": "Maple",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Sapindaceae (the Soapberry family)",
-              "season": "Spring",
-              "specialColors": "Leaves are golden, orange, red, and pink.",
-              "specialShapes": "Forked trunk. The leaves are oppositely arranged, usually palmate and lobed, but can also be pinnately compound or trifoliate, with a smooth or serrated margin.",
-              "crossReaction": "Plane tree pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/maple_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/maple_closeup.jpg"
-            }
-          },
-          {
-            "code": "ELM",
-            "displayName": "Elm",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Ulmaceae (the Elm family)",
-              "season": "Two distinct seasons, late winter to early spring, and late summer to fall (species dependent)",
-              "specialColors": "None",
-              "specialShapes": "The leaves are alternate, obovate with a pointed tip, usually a lopsided base, and serrated margins.",
-              "crossReaction": "There is no known cross-allergies related to elm.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/elm_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/elm_closeup.jpg"
-            }
-          },
-          {
-            "code": "COTTONWOOD",
-            "displayName": "Cottonwood",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Salicaceae (the Willow family)",
-              "season": "Late winter, early spring",
-              "specialColors": "The bark is yellowish-green and smooth on young trees but grayish-brown and deeply furrowed with scaly ridges in maturity.",
-              "specialShapes": "Cottonwood leaves are alternate and triangular. The trees produce white seeds that look like cotton. These seeds appear after the pollen season.",
-              "crossReaction": "Birch, Oak, Hazel or Alder.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/cottonwood_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/cottonwood_closeup.jpg"
-            }
-          },
-          {
-            "code": "ALDER",
-            "displayName": "Alder",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 0,
-              "category": "None",
-              "indexDescription": "Pollen levels are very low and are not likely to trigger allergic reactions",
-              "color": {}
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, early spring",
-              "specialColors": "In the autumn, the leaves tend to turn brown.",
-              "specialShapes": "The trees grow catkins, which are clusters of flowers without petals.",
-              "crossReaction": "Birch, Hazel, Hornbeam, Beech, Willow and Oak pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/alder_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/alder_closeup.jpg"
-            }
-          },
-          {
-            "code": "BIRCH",
-            "displayName": "Birch",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, spring",
-              "specialColors": "The bark is usually whitish-gray, silver, or sometimes red.",
-              "specialShapes": "Birch leaves are often triangular with jagged edges. The bark on most birch trees has horizontal dark streaks that look like scoring. Birch tree bark is also well-known for its paper-like texture and peeling nature.",
-              "crossReaction": "Alder, Hazel, Hornbeam, Beech, Willow, and Oak pollen. In addition, there may be a higher risk for food allergies like hazelnuts, almonds, peanuts, pears, apples, cherries and carrots.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/birch_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/birch_closeup.jpg"
-            }
-          },
-          {
-            "code": "ASH",
-            "displayName": "Ash",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Oleaceae (the Olive family)",
-              "season": "Late winter, spring",
-              "specialColors": "Yellowish-green leaves.",
-              "specialShapes": "The leaves are usually opposite and pinnately compound with an odd number of leaflets. Ash trees produce `helicopter seeds`.",
-              "crossReaction": "Olive and Privet pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/ash_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/ash_closeup.jpg"
-            }
-          },
-          {
-            "code": "PINE",
-            "displayName": "Pine",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Pinaceae (the Pine family)",
-              "season": "Spring",
-              "specialColors": "Reddish-brown or gray bark.",
-              "specialShapes": "The leaves are green needles.",
-              "crossReaction": "Spruce, Hemlock and Fir pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/pine_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/pine_closeup.jpg"
-            }
-          },
-          {
-            "code": "OAK",
-            "displayName": "Oak",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Fagaceae (the Beech family)",
-              "season": "Spring",
-              "specialColors": "The bark color of oaks ranges from whitish-gray to dark, almost black.",
-              "specialShapes": "The leaves are alternate and usually lobed with smooth or spiny margins. The fruits are acorns, oval-shaped seeds in a cupped structure named cupule.",
-              "crossReaction": "Alder, Birch, Hazel, Hornbeam, and Beech pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/oak_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/oak_closeup.jpg"
-            }
-          },
-          {
-            "code": "JUNIPER",
-            "displayName": "Juniper",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Cupressaceae (the Cypress family)",
-              "season": "Early winter to late spring (most species)",
-              "specialColors": "The bark is reddish-brown.",
-              "specialShapes": "The leaves can appear as two types of needles; small sharp needles arranged in opposite pairs or whorls and scaly leaves. The cones look like berries.",
-              "crossReaction": "Cedar and Cypress pollen. In addition, there may be a higher risk of food allergy to peach.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/juniper_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/juniper_closeup.jpg"
-            }
-          },
-          {
-            "code": "GRAMINALES",
-            "displayName": "Grasses"
-          },
-          {
-            "code": "RAGWEED",
-            "displayName": "Ragweed"
-          }
-        ]
       },
       {
         "date": {
@@ -1687,288 +1405,11 @@
         ]
       }
     ],
-    "timestamp": "2026-03-18T13:16:12.558748"
+    "timestamp": "2026-03-18T14:01:40.585927"
   },
   {
     "regionCode": "US",
     "dailyInfo": [
-      {
-        "date": {
-          "year": 2026,
-          "month": 3,
-          "day": 18
-        },
-        "pollenTypeInfo": [
-          {
-            "code": "GRASS",
-            "displayName": "Grass"
-          },
-          {
-            "code": "TREE",
-            "displayName": "Tree",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "healthRecommendations": [
-              "Pollen levels are very low right now. It's a great day to enjoy the outdoors!"
-            ]
-          },
-          {
-            "code": "WEED",
-            "displayName": "Weed"
-          }
-        ],
-        "plantInfo": [
-          {
-            "code": "MAPLE",
-            "displayName": "Maple",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Sapindaceae (the Soapberry family)",
-              "season": "Spring",
-              "specialColors": "Leaves are golden, orange, red, and pink.",
-              "specialShapes": "Forked trunk. The leaves are oppositely arranged, usually palmate and lobed, but can also be pinnately compound or trifoliate, with a smooth or serrated margin.",
-              "crossReaction": "Plane tree pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/maple_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/maple_closeup.jpg"
-            }
-          },
-          {
-            "code": "ELM",
-            "displayName": "Elm",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Ulmaceae (the Elm family)",
-              "season": "Two distinct seasons, late winter to early spring, and late summer to fall (species dependent)",
-              "specialColors": "None",
-              "specialShapes": "The leaves are alternate, obovate with a pointed tip, usually a lopsided base, and serrated margins.",
-              "crossReaction": "There is no known cross-allergies related to elm.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/elm_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/elm_closeup.jpg"
-            }
-          },
-          {
-            "code": "COTTONWOOD",
-            "displayName": "Cottonwood",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Salicaceae (the Willow family)",
-              "season": "Late winter, early spring",
-              "specialColors": "The bark is yellowish-green and smooth on young trees but grayish-brown and deeply furrowed with scaly ridges in maturity.",
-              "specialShapes": "Cottonwood leaves are alternate and triangular. The trees produce white seeds that look like cotton. These seeds appear after the pollen season.",
-              "crossReaction": "Birch, Oak, Hazel or Alder.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/cottonwood_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/cottonwood_closeup.jpg"
-            }
-          },
-          {
-            "code": "ALDER",
-            "displayName": "Alder",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 0,
-              "category": "None",
-              "indexDescription": "Pollen levels are very low and are not likely to trigger allergic reactions",
-              "color": {}
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, early spring",
-              "specialColors": "In the autumn, the leaves tend to turn brown.",
-              "specialShapes": "The trees grow catkins, which are clusters of flowers without petals.",
-              "crossReaction": "Birch, Hazel, Hornbeam, Beech, Willow and Oak pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/alder_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/alder_closeup.jpg"
-            }
-          },
-          {
-            "code": "BIRCH",
-            "displayName": "Birch",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, spring",
-              "specialColors": "The bark is usually whitish-gray, silver, or sometimes red.",
-              "specialShapes": "Birch leaves are often triangular with jagged edges. The bark on most birch trees has horizontal dark streaks that look like scoring. Birch tree bark is also well-known for its paper-like texture and peeling nature.",
-              "crossReaction": "Alder, Hazel, Hornbeam, Beech, Willow, and Oak pollen. In addition, there may be a higher risk for food allergies like hazelnuts, almonds, peanuts, pears, apples, cherries and carrots.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/birch_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/birch_closeup.jpg"
-            }
-          },
-          {
-            "code": "ASH",
-            "displayName": "Ash",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Oleaceae (the Olive family)",
-              "season": "Late winter, spring",
-              "specialColors": "Yellowish-green leaves.",
-              "specialShapes": "The leaves are usually opposite and pinnately compound with an odd number of leaflets. Ash trees produce `helicopter seeds`.",
-              "crossReaction": "Olive and Privet pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/ash_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/ash_closeup.jpg"
-            }
-          },
-          {
-            "code": "PINE",
-            "displayName": "Pine",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Pinaceae (the Pine family)",
-              "season": "Spring",
-              "specialColors": "Reddish-brown or gray bark.",
-              "specialShapes": "The leaves are green needles.",
-              "crossReaction": "Spruce, Hemlock and Fir pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/pine_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/pine_closeup.jpg"
-            }
-          },
-          {
-            "code": "OAK",
-            "displayName": "Oak",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Fagaceae (the Beech family)",
-              "season": "Spring",
-              "specialColors": "The bark color of oaks ranges from whitish-gray to dark, almost black.",
-              "specialShapes": "The leaves are alternate and usually lobed with smooth or spiny margins. The fruits are acorns, oval-shaped seeds in a cupped structure named cupule.",
-              "crossReaction": "Alder, Birch, Hazel, Hornbeam, and Beech pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/oak_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/oak_closeup.jpg"
-            }
-          },
-          {
-            "code": "JUNIPER",
-            "displayName": "Juniper",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Cupressaceae (the Cypress family)",
-              "season": "Early winter to late spring (most species)",
-              "specialColors": "The bark is reddish-brown.",
-              "specialShapes": "The leaves can appear as two types of needles; small sharp needles arranged in opposite pairs or whorls and scaly leaves. The cones look like berries.",
-              "crossReaction": "Cedar and Cypress pollen. In addition, there may be a higher risk of food allergy to peach.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/juniper_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/juniper_closeup.jpg"
-            }
-          },
-          {
-            "code": "GRAMINALES",
-            "displayName": "Grasses"
-          },
-          {
-            "code": "RAGWEED",
-            "displayName": "Ragweed"
-          }
-        ]
-      },
       {
         "date": {
           "year": 2026,
@@ -2886,12 +2327,294 @@
             "indexInfo": {
               "code": "UPI",
               "displayName": "Universal Pollen Index",
+              "value": 2,
+              "category": "Low",
+              "indexDescription": "People with high allergy to pollen are likely to experience symptoms",
+              "color": {
+                "red": 0.5176471,
+                "green": 0.8117647,
+                "blue": 0.2
+              }
+            },
+            "plantDescription": {
+              "type": "TREE",
+              "family": "Ulmaceae (the Elm family)",
+              "season": "Two distinct seasons, late winter to early spring, and late summer to fall (species dependent)",
+              "specialColors": "None",
+              "specialShapes": "The leaves are alternate, obovate with a pointed tip, usually a lopsided base, and serrated margins.",
+              "crossReaction": "There is no known cross-allergies related to elm.",
+              "picture": "https://storage.googleapis.com/pollen-pictures/elm_full.jpg",
+              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/elm_closeup.jpg"
+            }
+          },
+          {
+            "code": "COTTONWOOD",
+            "displayName": "Cottonwood",
+            "inSeason": false,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
               "value": 1,
               "category": "Very Low",
               "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
               "color": {
                 "green": 0.61960787,
                 "blue": 0.22745098
+              }
+            },
+            "plantDescription": {
+              "type": "TREE",
+              "family": "Salicaceae (the Willow family)",
+              "season": "Late winter, early spring",
+              "specialColors": "The bark is yellowish-green and smooth on young trees but grayish-brown and deeply furrowed with scaly ridges in maturity.",
+              "specialShapes": "Cottonwood leaves are alternate and triangular. The trees produce white seeds that look like cotton. These seeds appear after the pollen season.",
+              "crossReaction": "Birch, Oak, Hazel or Alder.",
+              "picture": "https://storage.googleapis.com/pollen-pictures/cottonwood_full.jpg",
+              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/cottonwood_closeup.jpg"
+            }
+          },
+          {
+            "code": "ALDER",
+            "displayName": "Alder",
+            "inSeason": true,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
+              "value": 0,
+              "category": "None",
+              "indexDescription": "Pollen levels are very low and are not likely to trigger allergic reactions",
+              "color": {}
+            },
+            "plantDescription": {
+              "type": "TREE",
+              "family": "Betulaceae (the Birch family)",
+              "season": "Late winter, early spring",
+              "specialColors": "In the autumn, the leaves tend to turn brown.",
+              "specialShapes": "The trees grow catkins, which are clusters of flowers without petals.",
+              "crossReaction": "Birch, Hazel, Hornbeam, Beech, Willow and Oak pollen.",
+              "picture": "https://storage.googleapis.com/pollen-pictures/alder_full.jpg",
+              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/alder_closeup.jpg"
+            }
+          },
+          {
+            "code": "BIRCH",
+            "displayName": "Birch",
+            "inSeason": false,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
+              "value": 1,
+              "category": "Very Low",
+              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
+              "color": {
+                "green": 0.61960787,
+                "blue": 0.22745098
+              }
+            },
+            "plantDescription": {
+              "type": "TREE",
+              "family": "Betulaceae (the Birch family)",
+              "season": "Late winter, spring",
+              "specialColors": "The bark is usually whitish-gray, silver, or sometimes red.",
+              "specialShapes": "Birch leaves are often triangular with jagged edges. The bark on most birch trees has horizontal dark streaks that look like scoring. Birch tree bark is also well-known for its paper-like texture and peeling nature.",
+              "crossReaction": "Alder, Hazel, Hornbeam, Beech, Willow, and Oak pollen. In addition, there may be a higher risk for food allergies like hazelnuts, almonds, peanuts, pears, apples, cherries and carrots.",
+              "picture": "https://storage.googleapis.com/pollen-pictures/birch_full.jpg",
+              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/birch_closeup.jpg"
+            }
+          },
+          {
+            "code": "ASH",
+            "displayName": "Ash",
+            "inSeason": false,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
+              "value": 1,
+              "category": "Very Low",
+              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
+              "color": {
+                "green": 0.61960787,
+                "blue": 0.22745098
+              }
+            },
+            "plantDescription": {
+              "type": "TREE",
+              "family": "Oleaceae (the Olive family)",
+              "season": "Late winter, spring",
+              "specialColors": "Yellowish-green leaves.",
+              "specialShapes": "The leaves are usually opposite and pinnately compound with an odd number of leaflets. Ash trees produce `helicopter seeds`.",
+              "crossReaction": "Olive and Privet pollen.",
+              "picture": "https://storage.googleapis.com/pollen-pictures/ash_full.jpg",
+              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/ash_closeup.jpg"
+            }
+          },
+          {
+            "code": "PINE",
+            "displayName": "Pine",
+            "inSeason": false,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
+              "value": 1,
+              "category": "Very Low",
+              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
+              "color": {
+                "green": 0.61960787,
+                "blue": 0.22745098
+              }
+            },
+            "plantDescription": {
+              "type": "TREE",
+              "family": "Pinaceae (the Pine family)",
+              "season": "Spring",
+              "specialColors": "Reddish-brown or gray bark.",
+              "specialShapes": "The leaves are green needles.",
+              "crossReaction": "Spruce, Hemlock and Fir pollen.",
+              "picture": "https://storage.googleapis.com/pollen-pictures/pine_full.jpg",
+              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/pine_closeup.jpg"
+            }
+          },
+          {
+            "code": "OAK",
+            "displayName": "Oak",
+            "inSeason": false,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
+              "value": 1,
+              "category": "Very Low",
+              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
+              "color": {
+                "green": 0.61960787,
+                "blue": 0.22745098
+              }
+            },
+            "plantDescription": {
+              "type": "TREE",
+              "family": "Fagaceae (the Beech family)",
+              "season": "Spring",
+              "specialColors": "The bark color of oaks ranges from whitish-gray to dark, almost black.",
+              "specialShapes": "The leaves are alternate and usually lobed with smooth or spiny margins. The fruits are acorns, oval-shaped seeds in a cupped structure named cupule.",
+              "crossReaction": "Alder, Birch, Hazel, Hornbeam, and Beech pollen.",
+              "picture": "https://storage.googleapis.com/pollen-pictures/oak_full.jpg",
+              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/oak_closeup.jpg"
+            }
+          },
+          {
+            "code": "JUNIPER",
+            "displayName": "Juniper",
+            "inSeason": true,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
+              "value": 1,
+              "category": "Very Low",
+              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
+              "color": {
+                "green": 0.61960787,
+                "blue": 0.22745098
+              }
+            },
+            "plantDescription": {
+              "type": "TREE",
+              "family": "Cupressaceae (the Cypress family)",
+              "season": "Early winter to late spring (most species)",
+              "specialColors": "The bark is reddish-brown.",
+              "specialShapes": "The leaves can appear as two types of needles; small sharp needles arranged in opposite pairs or whorls and scaly leaves. The cones look like berries.",
+              "crossReaction": "Cedar and Cypress pollen. In addition, there may be a higher risk of food allergy to peach.",
+              "picture": "https://storage.googleapis.com/pollen-pictures/juniper_full.jpg",
+              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/juniper_closeup.jpg"
+            }
+          },
+          {
+            "code": "GRAMINALES",
+            "displayName": "Grasses"
+          },
+          {
+            "code": "RAGWEED",
+            "displayName": "Ragweed"
+          }
+        ]
+      },
+      {
+        "date": {
+          "year": 2026,
+          "month": 3,
+          "day": 23
+        },
+        "pollenTypeInfo": [
+          {
+            "code": "GRASS",
+            "displayName": "Grass"
+          },
+          {
+            "code": "TREE",
+            "displayName": "Tree",
+            "inSeason": true,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
+              "value": 4,
+              "category": "High",
+              "indexDescription": "Many people with allergy to pollen are likely to experience symptoms. Very sensitive people may experience severe symptoms",
+              "color": {
+                "red": 1,
+                "green": 0.54901963
+              }
+            },
+            "healthRecommendations": [
+              "Avoid mowing the lawn and raking leaves.",
+              "When driving the car, close your windows and turn the air conditioning system to recirculation mode.",
+              "Keep your windows closed and turn on your air purifier or air conditioning.",
+              "Consider staying indoors during the peak pollen hours (morning and early afternoon)."
+            ]
+          },
+          {
+            "code": "WEED",
+            "displayName": "Weed"
+          }
+        ],
+        "plantInfo": [
+          {
+            "code": "MAPLE",
+            "displayName": "Maple",
+            "inSeason": true,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
+              "value": 4,
+              "category": "High",
+              "indexDescription": "Many people with allergy to pollen are likely to experience symptoms. Very sensitive people may experience severe symptoms",
+              "color": {
+                "red": 1,
+                "green": 0.54901963
+              }
+            },
+            "plantDescription": {
+              "type": "TREE",
+              "family": "Sapindaceae (the Soapberry family)",
+              "season": "Spring",
+              "specialColors": "Leaves are golden, orange, red, and pink.",
+              "specialShapes": "Forked trunk. The leaves are oppositely arranged, usually palmate and lobed, but can also be pinnately compound or trifoliate, with a smooth or serrated margin.",
+              "crossReaction": "Plane tree pollen.",
+              "picture": "https://storage.googleapis.com/pollen-pictures/maple_full.jpg",
+              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/maple_closeup.jpg"
+            }
+          },
+          {
+            "code": "ELM",
+            "displayName": "Elm",
+            "inSeason": true,
+            "indexInfo": {
+              "code": "UPI",
+              "displayName": "Universal Pollen Index",
+              "value": 2,
+              "category": "Low",
+              "indexDescription": "People with high allergy to pollen are likely to experience symptoms",
+              "color": {
+                "red": 0.5176471,
+                "green": 0.8117647,
+                "blue": 0.2
               }
             },
             "plantDescription": {
@@ -3095,1414 +2818,7 @@
         ]
       }
     ],
-    "timestamp": "2026-03-18T13:17:22.685538"
-  },
-  {
-    "regionCode": "US",
-    "dailyInfo": [
-      {
-        "date": {
-          "year": 2026,
-          "month": 3,
-          "day": 18
-        },
-        "pollenTypeInfo": [
-          {
-            "code": "GRASS",
-            "displayName": "Grass"
-          },
-          {
-            "code": "TREE",
-            "displayName": "Tree",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "healthRecommendations": [
-              "Pollen levels are very low right now. It's a great day to enjoy the outdoors!"
-            ]
-          },
-          {
-            "code": "WEED",
-            "displayName": "Weed"
-          }
-        ],
-        "plantInfo": [
-          {
-            "code": "MAPLE",
-            "displayName": "Maple",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Sapindaceae (the Soapberry family)",
-              "season": "Spring",
-              "specialColors": "Leaves are golden, orange, red, and pink.",
-              "specialShapes": "Forked trunk. The leaves are oppositely arranged, usually palmate and lobed, but can also be pinnately compound or trifoliate, with a smooth or serrated margin.",
-              "crossReaction": "Plane tree pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/maple_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/maple_closeup.jpg"
-            }
-          },
-          {
-            "code": "ELM",
-            "displayName": "Elm",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Ulmaceae (the Elm family)",
-              "season": "Two distinct seasons, late winter to early spring, and late summer to fall (species dependent)",
-              "specialColors": "None",
-              "specialShapes": "The leaves are alternate, obovate with a pointed tip, usually a lopsided base, and serrated margins.",
-              "crossReaction": "There is no known cross-allergies related to elm.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/elm_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/elm_closeup.jpg"
-            }
-          },
-          {
-            "code": "COTTONWOOD",
-            "displayName": "Cottonwood",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Salicaceae (the Willow family)",
-              "season": "Late winter, early spring",
-              "specialColors": "The bark is yellowish-green and smooth on young trees but grayish-brown and deeply furrowed with scaly ridges in maturity.",
-              "specialShapes": "Cottonwood leaves are alternate and triangular. The trees produce white seeds that look like cotton. These seeds appear after the pollen season.",
-              "crossReaction": "Birch, Oak, Hazel or Alder.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/cottonwood_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/cottonwood_closeup.jpg"
-            }
-          },
-          {
-            "code": "ALDER",
-            "displayName": "Alder",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 0,
-              "category": "None",
-              "indexDescription": "Pollen levels are very low and are not likely to trigger allergic reactions",
-              "color": {}
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, early spring",
-              "specialColors": "In the autumn, the leaves tend to turn brown.",
-              "specialShapes": "The trees grow catkins, which are clusters of flowers without petals.",
-              "crossReaction": "Birch, Hazel, Hornbeam, Beech, Willow and Oak pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/alder_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/alder_closeup.jpg"
-            }
-          },
-          {
-            "code": "BIRCH",
-            "displayName": "Birch",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, spring",
-              "specialColors": "The bark is usually whitish-gray, silver, or sometimes red.",
-              "specialShapes": "Birch leaves are often triangular with jagged edges. The bark on most birch trees has horizontal dark streaks that look like scoring. Birch tree bark is also well-known for its paper-like texture and peeling nature.",
-              "crossReaction": "Alder, Hazel, Hornbeam, Beech, Willow, and Oak pollen. In addition, there may be a higher risk for food allergies like hazelnuts, almonds, peanuts, pears, apples, cherries and carrots.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/birch_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/birch_closeup.jpg"
-            }
-          },
-          {
-            "code": "ASH",
-            "displayName": "Ash",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Oleaceae (the Olive family)",
-              "season": "Late winter, spring",
-              "specialColors": "Yellowish-green leaves.",
-              "specialShapes": "The leaves are usually opposite and pinnately compound with an odd number of leaflets. Ash trees produce `helicopter seeds`.",
-              "crossReaction": "Olive and Privet pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/ash_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/ash_closeup.jpg"
-            }
-          },
-          {
-            "code": "PINE",
-            "displayName": "Pine",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Pinaceae (the Pine family)",
-              "season": "Spring",
-              "specialColors": "Reddish-brown or gray bark.",
-              "specialShapes": "The leaves are green needles.",
-              "crossReaction": "Spruce, Hemlock and Fir pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/pine_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/pine_closeup.jpg"
-            }
-          },
-          {
-            "code": "OAK",
-            "displayName": "Oak",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Fagaceae (the Beech family)",
-              "season": "Spring",
-              "specialColors": "The bark color of oaks ranges from whitish-gray to dark, almost black.",
-              "specialShapes": "The leaves are alternate and usually lobed with smooth or spiny margins. The fruits are acorns, oval-shaped seeds in a cupped structure named cupule.",
-              "crossReaction": "Alder, Birch, Hazel, Hornbeam, and Beech pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/oak_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/oak_closeup.jpg"
-            }
-          },
-          {
-            "code": "JUNIPER",
-            "displayName": "Juniper",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Cupressaceae (the Cypress family)",
-              "season": "Early winter to late spring (most species)",
-              "specialColors": "The bark is reddish-brown.",
-              "specialShapes": "The leaves can appear as two types of needles; small sharp needles arranged in opposite pairs or whorls and scaly leaves. The cones look like berries.",
-              "crossReaction": "Cedar and Cypress pollen. In addition, there may be a higher risk of food allergy to peach.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/juniper_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/juniper_closeup.jpg"
-            }
-          },
-          {
-            "code": "GRAMINALES",
-            "displayName": "Grasses"
-          },
-          {
-            "code": "RAGWEED",
-            "displayName": "Ragweed"
-          }
-        ]
-      },
-      {
-        "date": {
-          "year": 2026,
-          "month": 3,
-          "day": 19
-        },
-        "pollenTypeInfo": [
-          {
-            "code": "GRASS",
-            "displayName": "Grass"
-          },
-          {
-            "code": "TREE",
-            "displayName": "Tree",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 2,
-              "category": "Low",
-              "indexDescription": "People with high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 0.5176471,
-                "green": 0.8117647,
-                "blue": 0.2
-              }
-            },
-            "healthRecommendations": [
-              "It's a good day for outdoor activities since pollen levels are low.",
-              "Do you know which plants cause your pollen allergy? Check out the pollen data to be prepared."
-            ]
-          },
-          {
-            "code": "WEED",
-            "displayName": "Weed"
-          }
-        ],
-        "plantInfo": [
-          {
-            "code": "MAPLE",
-            "displayName": "Maple",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 2,
-              "category": "Low",
-              "indexDescription": "People with high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 0.5176471,
-                "green": 0.8117647,
-                "blue": 0.2
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Sapindaceae (the Soapberry family)",
-              "season": "Spring",
-              "specialColors": "Leaves are golden, orange, red, and pink.",
-              "specialShapes": "Forked trunk. The leaves are oppositely arranged, usually palmate and lobed, but can also be pinnately compound or trifoliate, with a smooth or serrated margin.",
-              "crossReaction": "Plane tree pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/maple_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/maple_closeup.jpg"
-            }
-          },
-          {
-            "code": "ELM",
-            "displayName": "Elm",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Ulmaceae (the Elm family)",
-              "season": "Two distinct seasons, late winter to early spring, and late summer to fall (species dependent)",
-              "specialColors": "None",
-              "specialShapes": "The leaves are alternate, obovate with a pointed tip, usually a lopsided base, and serrated margins.",
-              "crossReaction": "There is no known cross-allergies related to elm.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/elm_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/elm_closeup.jpg"
-            }
-          },
-          {
-            "code": "COTTONWOOD",
-            "displayName": "Cottonwood",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Salicaceae (the Willow family)",
-              "season": "Late winter, early spring",
-              "specialColors": "The bark is yellowish-green and smooth on young trees but grayish-brown and deeply furrowed with scaly ridges in maturity.",
-              "specialShapes": "Cottonwood leaves are alternate and triangular. The trees produce white seeds that look like cotton. These seeds appear after the pollen season.",
-              "crossReaction": "Birch, Oak, Hazel or Alder.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/cottonwood_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/cottonwood_closeup.jpg"
-            }
-          },
-          {
-            "code": "ALDER",
-            "displayName": "Alder",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 0,
-              "category": "None",
-              "indexDescription": "Pollen levels are very low and are not likely to trigger allergic reactions",
-              "color": {}
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, early spring",
-              "specialColors": "In the autumn, the leaves tend to turn brown.",
-              "specialShapes": "The trees grow catkins, which are clusters of flowers without petals.",
-              "crossReaction": "Birch, Hazel, Hornbeam, Beech, Willow and Oak pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/alder_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/alder_closeup.jpg"
-            }
-          },
-          {
-            "code": "BIRCH",
-            "displayName": "Birch",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, spring",
-              "specialColors": "The bark is usually whitish-gray, silver, or sometimes red.",
-              "specialShapes": "Birch leaves are often triangular with jagged edges. The bark on most birch trees has horizontal dark streaks that look like scoring. Birch tree bark is also well-known for its paper-like texture and peeling nature.",
-              "crossReaction": "Alder, Hazel, Hornbeam, Beech, Willow, and Oak pollen. In addition, there may be a higher risk for food allergies like hazelnuts, almonds, peanuts, pears, apples, cherries and carrots.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/birch_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/birch_closeup.jpg"
-            }
-          },
-          {
-            "code": "ASH",
-            "displayName": "Ash",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Oleaceae (the Olive family)",
-              "season": "Late winter, spring",
-              "specialColors": "Yellowish-green leaves.",
-              "specialShapes": "The leaves are usually opposite and pinnately compound with an odd number of leaflets. Ash trees produce `helicopter seeds`.",
-              "crossReaction": "Olive and Privet pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/ash_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/ash_closeup.jpg"
-            }
-          },
-          {
-            "code": "PINE",
-            "displayName": "Pine",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Pinaceae (the Pine family)",
-              "season": "Spring",
-              "specialColors": "Reddish-brown or gray bark.",
-              "specialShapes": "The leaves are green needles.",
-              "crossReaction": "Spruce, Hemlock and Fir pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/pine_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/pine_closeup.jpg"
-            }
-          },
-          {
-            "code": "OAK",
-            "displayName": "Oak",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Fagaceae (the Beech family)",
-              "season": "Spring",
-              "specialColors": "The bark color of oaks ranges from whitish-gray to dark, almost black.",
-              "specialShapes": "The leaves are alternate and usually lobed with smooth or spiny margins. The fruits are acorns, oval-shaped seeds in a cupped structure named cupule.",
-              "crossReaction": "Alder, Birch, Hazel, Hornbeam, and Beech pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/oak_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/oak_closeup.jpg"
-            }
-          },
-          {
-            "code": "JUNIPER",
-            "displayName": "Juniper",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Cupressaceae (the Cypress family)",
-              "season": "Early winter to late spring (most species)",
-              "specialColors": "The bark is reddish-brown.",
-              "specialShapes": "The leaves can appear as two types of needles; small sharp needles arranged in opposite pairs or whorls and scaly leaves. The cones look like berries.",
-              "crossReaction": "Cedar and Cypress pollen. In addition, there may be a higher risk of food allergy to peach.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/juniper_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/juniper_closeup.jpg"
-            }
-          },
-          {
-            "code": "GRAMINALES",
-            "displayName": "Grasses"
-          },
-          {
-            "code": "RAGWEED",
-            "displayName": "Ragweed"
-          }
-        ]
-      },
-      {
-        "date": {
-          "year": 2026,
-          "month": 3,
-          "day": 20
-        },
-        "pollenTypeInfo": [
-          {
-            "code": "GRASS",
-            "displayName": "Grass"
-          },
-          {
-            "code": "TREE",
-            "displayName": "Tree",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 3,
-              "category": "Moderate",
-              "indexDescription": "People with allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 1,
-                "green": 1
-              }
-            },
-            "healthRecommendations": [
-              "It's important to shower and wash your hair after spending a lot of time outdoors.",
-              "When spending time outside, use sunglasses and a cap to keep pollen out of your face and eyes.",
-              "Wash clothes worn outdoors to remove any remnants of pollen grains.",
-              "If possible, wear glasses instead of contact lenses.",
-              "Did you hang any laundry outside? Now is a good time to hang clothes indoors or use a dryer if possible."
-            ]
-          },
-          {
-            "code": "WEED",
-            "displayName": "Weed"
-          }
-        ],
-        "plantInfo": [
-          {
-            "code": "MAPLE",
-            "displayName": "Maple",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 3,
-              "category": "Moderate",
-              "indexDescription": "People with allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 1,
-                "green": 1
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Sapindaceae (the Soapberry family)",
-              "season": "Spring",
-              "specialColors": "Leaves are golden, orange, red, and pink.",
-              "specialShapes": "Forked trunk. The leaves are oppositely arranged, usually palmate and lobed, but can also be pinnately compound or trifoliate, with a smooth or serrated margin.",
-              "crossReaction": "Plane tree pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/maple_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/maple_closeup.jpg"
-            }
-          },
-          {
-            "code": "ELM",
-            "displayName": "Elm",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 2,
-              "category": "Low",
-              "indexDescription": "People with high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 0.5176471,
-                "green": 0.8117647,
-                "blue": 0.2
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Ulmaceae (the Elm family)",
-              "season": "Two distinct seasons, late winter to early spring, and late summer to fall (species dependent)",
-              "specialColors": "None",
-              "specialShapes": "The leaves are alternate, obovate with a pointed tip, usually a lopsided base, and serrated margins.",
-              "crossReaction": "There is no known cross-allergies related to elm.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/elm_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/elm_closeup.jpg"
-            }
-          },
-          {
-            "code": "COTTONWOOD",
-            "displayName": "Cottonwood",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Salicaceae (the Willow family)",
-              "season": "Late winter, early spring",
-              "specialColors": "The bark is yellowish-green and smooth on young trees but grayish-brown and deeply furrowed with scaly ridges in maturity.",
-              "specialShapes": "Cottonwood leaves are alternate and triangular. The trees produce white seeds that look like cotton. These seeds appear after the pollen season.",
-              "crossReaction": "Birch, Oak, Hazel or Alder.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/cottonwood_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/cottonwood_closeup.jpg"
-            }
-          },
-          {
-            "code": "ALDER",
-            "displayName": "Alder",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 0,
-              "category": "None",
-              "indexDescription": "Pollen levels are very low and are not likely to trigger allergic reactions",
-              "color": {}
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, early spring",
-              "specialColors": "In the autumn, the leaves tend to turn brown.",
-              "specialShapes": "The trees grow catkins, which are clusters of flowers without petals.",
-              "crossReaction": "Birch, Hazel, Hornbeam, Beech, Willow and Oak pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/alder_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/alder_closeup.jpg"
-            }
-          },
-          {
-            "code": "BIRCH",
-            "displayName": "Birch",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, spring",
-              "specialColors": "The bark is usually whitish-gray, silver, or sometimes red.",
-              "specialShapes": "Birch leaves are often triangular with jagged edges. The bark on most birch trees has horizontal dark streaks that look like scoring. Birch tree bark is also well-known for its paper-like texture and peeling nature.",
-              "crossReaction": "Alder, Hazel, Hornbeam, Beech, Willow, and Oak pollen. In addition, there may be a higher risk for food allergies like hazelnuts, almonds, peanuts, pears, apples, cherries and carrots.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/birch_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/birch_closeup.jpg"
-            }
-          },
-          {
-            "code": "ASH",
-            "displayName": "Ash",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Oleaceae (the Olive family)",
-              "season": "Late winter, spring",
-              "specialColors": "Yellowish-green leaves.",
-              "specialShapes": "The leaves are usually opposite and pinnately compound with an odd number of leaflets. Ash trees produce `helicopter seeds`.",
-              "crossReaction": "Olive and Privet pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/ash_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/ash_closeup.jpg"
-            }
-          },
-          {
-            "code": "PINE",
-            "displayName": "Pine",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Pinaceae (the Pine family)",
-              "season": "Spring",
-              "specialColors": "Reddish-brown or gray bark.",
-              "specialShapes": "The leaves are green needles.",
-              "crossReaction": "Spruce, Hemlock and Fir pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/pine_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/pine_closeup.jpg"
-            }
-          },
-          {
-            "code": "OAK",
-            "displayName": "Oak",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Fagaceae (the Beech family)",
-              "season": "Spring",
-              "specialColors": "The bark color of oaks ranges from whitish-gray to dark, almost black.",
-              "specialShapes": "The leaves are alternate and usually lobed with smooth or spiny margins. The fruits are acorns, oval-shaped seeds in a cupped structure named cupule.",
-              "crossReaction": "Alder, Birch, Hazel, Hornbeam, and Beech pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/oak_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/oak_closeup.jpg"
-            }
-          },
-          {
-            "code": "JUNIPER",
-            "displayName": "Juniper",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Cupressaceae (the Cypress family)",
-              "season": "Early winter to late spring (most species)",
-              "specialColors": "The bark is reddish-brown.",
-              "specialShapes": "The leaves can appear as two types of needles; small sharp needles arranged in opposite pairs or whorls and scaly leaves. The cones look like berries.",
-              "crossReaction": "Cedar and Cypress pollen. In addition, there may be a higher risk of food allergy to peach.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/juniper_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/juniper_closeup.jpg"
-            }
-          },
-          {
-            "code": "GRAMINALES",
-            "displayName": "Grasses"
-          },
-          {
-            "code": "RAGWEED",
-            "displayName": "Ragweed"
-          }
-        ]
-      },
-      {
-        "date": {
-          "year": 2026,
-          "month": 3,
-          "day": 21
-        },
-        "pollenTypeInfo": [
-          {
-            "code": "GRASS",
-            "displayName": "Grass"
-          },
-          {
-            "code": "TREE",
-            "displayName": "Tree",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 3,
-              "category": "Moderate",
-              "indexDescription": "People with allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 1,
-                "green": 1
-              }
-            },
-            "healthRecommendations": [
-              "It's important to shower and wash your hair after spending a lot of time outdoors.",
-              "When spending time outside, use sunglasses and a cap to keep pollen out of your face and eyes.",
-              "Wash clothes worn outdoors to remove any remnants of pollen grains.",
-              "If possible, wear glasses instead of contact lenses.",
-              "Did you hang any laundry outside? Now is a good time to hang clothes indoors or use a dryer if possible."
-            ]
-          },
-          {
-            "code": "WEED",
-            "displayName": "Weed"
-          }
-        ],
-        "plantInfo": [
-          {
-            "code": "MAPLE",
-            "displayName": "Maple",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 3,
-              "category": "Moderate",
-              "indexDescription": "People with allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 1,
-                "green": 1
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Sapindaceae (the Soapberry family)",
-              "season": "Spring",
-              "specialColors": "Leaves are golden, orange, red, and pink.",
-              "specialShapes": "Forked trunk. The leaves are oppositely arranged, usually palmate and lobed, but can also be pinnately compound or trifoliate, with a smooth or serrated margin.",
-              "crossReaction": "Plane tree pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/maple_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/maple_closeup.jpg"
-            }
-          },
-          {
-            "code": "ELM",
-            "displayName": "Elm",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 2,
-              "category": "Low",
-              "indexDescription": "People with high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 0.5176471,
-                "green": 0.8117647,
-                "blue": 0.2
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Ulmaceae (the Elm family)",
-              "season": "Two distinct seasons, late winter to early spring, and late summer to fall (species dependent)",
-              "specialColors": "None",
-              "specialShapes": "The leaves are alternate, obovate with a pointed tip, usually a lopsided base, and serrated margins.",
-              "crossReaction": "There is no known cross-allergies related to elm.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/elm_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/elm_closeup.jpg"
-            }
-          },
-          {
-            "code": "COTTONWOOD",
-            "displayName": "Cottonwood",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Salicaceae (the Willow family)",
-              "season": "Late winter, early spring",
-              "specialColors": "The bark is yellowish-green and smooth on young trees but grayish-brown and deeply furrowed with scaly ridges in maturity.",
-              "specialShapes": "Cottonwood leaves are alternate and triangular. The trees produce white seeds that look like cotton. These seeds appear after the pollen season.",
-              "crossReaction": "Birch, Oak, Hazel or Alder.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/cottonwood_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/cottonwood_closeup.jpg"
-            }
-          },
-          {
-            "code": "ALDER",
-            "displayName": "Alder",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 0,
-              "category": "None",
-              "indexDescription": "Pollen levels are very low and are not likely to trigger allergic reactions",
-              "color": {}
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, early spring",
-              "specialColors": "In the autumn, the leaves tend to turn brown.",
-              "specialShapes": "The trees grow catkins, which are clusters of flowers without petals.",
-              "crossReaction": "Birch, Hazel, Hornbeam, Beech, Willow and Oak pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/alder_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/alder_closeup.jpg"
-            }
-          },
-          {
-            "code": "BIRCH",
-            "displayName": "Birch",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, spring",
-              "specialColors": "The bark is usually whitish-gray, silver, or sometimes red.",
-              "specialShapes": "Birch leaves are often triangular with jagged edges. The bark on most birch trees has horizontal dark streaks that look like scoring. Birch tree bark is also well-known for its paper-like texture and peeling nature.",
-              "crossReaction": "Alder, Hazel, Hornbeam, Beech, Willow, and Oak pollen. In addition, there may be a higher risk for food allergies like hazelnuts, almonds, peanuts, pears, apples, cherries and carrots.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/birch_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/birch_closeup.jpg"
-            }
-          },
-          {
-            "code": "ASH",
-            "displayName": "Ash",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Oleaceae (the Olive family)",
-              "season": "Late winter, spring",
-              "specialColors": "Yellowish-green leaves.",
-              "specialShapes": "The leaves are usually opposite and pinnately compound with an odd number of leaflets. Ash trees produce `helicopter seeds`.",
-              "crossReaction": "Olive and Privet pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/ash_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/ash_closeup.jpg"
-            }
-          },
-          {
-            "code": "PINE",
-            "displayName": "Pine",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Pinaceae (the Pine family)",
-              "season": "Spring",
-              "specialColors": "Reddish-brown or gray bark.",
-              "specialShapes": "The leaves are green needles.",
-              "crossReaction": "Spruce, Hemlock and Fir pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/pine_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/pine_closeup.jpg"
-            }
-          },
-          {
-            "code": "OAK",
-            "displayName": "Oak",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Fagaceae (the Beech family)",
-              "season": "Spring",
-              "specialColors": "The bark color of oaks ranges from whitish-gray to dark, almost black.",
-              "specialShapes": "The leaves are alternate and usually lobed with smooth or spiny margins. The fruits are acorns, oval-shaped seeds in a cupped structure named cupule.",
-              "crossReaction": "Alder, Birch, Hazel, Hornbeam, and Beech pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/oak_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/oak_closeup.jpg"
-            }
-          },
-          {
-            "code": "JUNIPER",
-            "displayName": "Juniper",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Cupressaceae (the Cypress family)",
-              "season": "Early winter to late spring (most species)",
-              "specialColors": "The bark is reddish-brown.",
-              "specialShapes": "The leaves can appear as two types of needles; small sharp needles arranged in opposite pairs or whorls and scaly leaves. The cones look like berries.",
-              "crossReaction": "Cedar and Cypress pollen. In addition, there may be a higher risk of food allergy to peach.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/juniper_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/juniper_closeup.jpg"
-            }
-          },
-          {
-            "code": "GRAMINALES",
-            "displayName": "Grasses"
-          },
-          {
-            "code": "RAGWEED",
-            "displayName": "Ragweed"
-          }
-        ]
-      },
-      {
-        "date": {
-          "year": 2026,
-          "month": 3,
-          "day": 22
-        },
-        "pollenTypeInfo": [
-          {
-            "code": "GRASS",
-            "displayName": "Grass"
-          },
-          {
-            "code": "TREE",
-            "displayName": "Tree",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 3,
-              "category": "Moderate",
-              "indexDescription": "People with allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 1,
-                "green": 1
-              }
-            },
-            "healthRecommendations": [
-              "It's important to shower and wash your hair after spending a lot of time outdoors.",
-              "When spending time outside, use sunglasses and a cap to keep pollen out of your face and eyes.",
-              "Wash clothes worn outdoors to remove any remnants of pollen grains.",
-              "If possible, wear glasses instead of contact lenses.",
-              "Did you hang any laundry outside? Now is a good time to hang clothes indoors or use a dryer if possible."
-            ]
-          },
-          {
-            "code": "WEED",
-            "displayName": "Weed"
-          }
-        ],
-        "plantInfo": [
-          {
-            "code": "MAPLE",
-            "displayName": "Maple",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 3,
-              "category": "Moderate",
-              "indexDescription": "People with allergy to pollen are likely to experience symptoms",
-              "color": {
-                "red": 1,
-                "green": 1
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Sapindaceae (the Soapberry family)",
-              "season": "Spring",
-              "specialColors": "Leaves are golden, orange, red, and pink.",
-              "specialShapes": "Forked trunk. The leaves are oppositely arranged, usually palmate and lobed, but can also be pinnately compound or trifoliate, with a smooth or serrated margin.",
-              "crossReaction": "Plane tree pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/maple_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/maple_closeup.jpg"
-            }
-          },
-          {
-            "code": "ELM",
-            "displayName": "Elm",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Ulmaceae (the Elm family)",
-              "season": "Two distinct seasons, late winter to early spring, and late summer to fall (species dependent)",
-              "specialColors": "None",
-              "specialShapes": "The leaves are alternate, obovate with a pointed tip, usually a lopsided base, and serrated margins.",
-              "crossReaction": "There is no known cross-allergies related to elm.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/elm_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/elm_closeup.jpg"
-            }
-          },
-          {
-            "code": "COTTONWOOD",
-            "displayName": "Cottonwood",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Salicaceae (the Willow family)",
-              "season": "Late winter, early spring",
-              "specialColors": "The bark is yellowish-green and smooth on young trees but grayish-brown and deeply furrowed with scaly ridges in maturity.",
-              "specialShapes": "Cottonwood leaves are alternate and triangular. The trees produce white seeds that look like cotton. These seeds appear after the pollen season.",
-              "crossReaction": "Birch, Oak, Hazel or Alder.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/cottonwood_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/cottonwood_closeup.jpg"
-            }
-          },
-          {
-            "code": "ALDER",
-            "displayName": "Alder",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 0,
-              "category": "None",
-              "indexDescription": "Pollen levels are very low and are not likely to trigger allergic reactions",
-              "color": {}
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, early spring",
-              "specialColors": "In the autumn, the leaves tend to turn brown.",
-              "specialShapes": "The trees grow catkins, which are clusters of flowers without petals.",
-              "crossReaction": "Birch, Hazel, Hornbeam, Beech, Willow and Oak pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/alder_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/alder_closeup.jpg"
-            }
-          },
-          {
-            "code": "BIRCH",
-            "displayName": "Birch",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Betulaceae (the Birch family)",
-              "season": "Late winter, spring",
-              "specialColors": "The bark is usually whitish-gray, silver, or sometimes red.",
-              "specialShapes": "Birch leaves are often triangular with jagged edges. The bark on most birch trees has horizontal dark streaks that look like scoring. Birch tree bark is also well-known for its paper-like texture and peeling nature.",
-              "crossReaction": "Alder, Hazel, Hornbeam, Beech, Willow, and Oak pollen. In addition, there may be a higher risk for food allergies like hazelnuts, almonds, peanuts, pears, apples, cherries and carrots.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/birch_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/birch_closeup.jpg"
-            }
-          },
-          {
-            "code": "ASH",
-            "displayName": "Ash",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Oleaceae (the Olive family)",
-              "season": "Late winter, spring",
-              "specialColors": "Yellowish-green leaves.",
-              "specialShapes": "The leaves are usually opposite and pinnately compound with an odd number of leaflets. Ash trees produce `helicopter seeds`.",
-              "crossReaction": "Olive and Privet pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/ash_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/ash_closeup.jpg"
-            }
-          },
-          {
-            "code": "PINE",
-            "displayName": "Pine",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Pinaceae (the Pine family)",
-              "season": "Spring",
-              "specialColors": "Reddish-brown or gray bark.",
-              "specialShapes": "The leaves are green needles.",
-              "crossReaction": "Spruce, Hemlock and Fir pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/pine_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/pine_closeup.jpg"
-            }
-          },
-          {
-            "code": "OAK",
-            "displayName": "Oak",
-            "inSeason": false,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Fagaceae (the Beech family)",
-              "season": "Spring",
-              "specialColors": "The bark color of oaks ranges from whitish-gray to dark, almost black.",
-              "specialShapes": "The leaves are alternate and usually lobed with smooth or spiny margins. The fruits are acorns, oval-shaped seeds in a cupped structure named cupule.",
-              "crossReaction": "Alder, Birch, Hazel, Hornbeam, and Beech pollen.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/oak_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/oak_closeup.jpg"
-            }
-          },
-          {
-            "code": "JUNIPER",
-            "displayName": "Juniper",
-            "inSeason": true,
-            "indexInfo": {
-              "code": "UPI",
-              "displayName": "Universal Pollen Index",
-              "value": 1,
-              "category": "Very Low",
-              "indexDescription": "People with very high allergy to pollen are likely to experience symptoms",
-              "color": {
-                "green": 0.61960787,
-                "blue": 0.22745098
-              }
-            },
-            "plantDescription": {
-              "type": "TREE",
-              "family": "Cupressaceae (the Cypress family)",
-              "season": "Early winter to late spring (most species)",
-              "specialColors": "The bark is reddish-brown.",
-              "specialShapes": "The leaves can appear as two types of needles; small sharp needles arranged in opposite pairs or whorls and scaly leaves. The cones look like berries.",
-              "crossReaction": "Cedar and Cypress pollen. In addition, there may be a higher risk of food allergy to peach.",
-              "picture": "https://storage.googleapis.com/pollen-pictures/juniper_full.jpg",
-              "pictureCloseup": "https://storage.googleapis.com/pollen-pictures/juniper_closeup.jpg"
-            }
-          },
-          {
-            "code": "GRAMINALES",
-            "displayName": "Grasses"
-          },
-          {
-            "code": "RAGWEED",
-            "displayName": "Ragweed"
-          }
-        ]
-      }
-    ],
-    "timestamp": "2026-03-18T13:25:52.304623"
+    "fetched_timestamp": "2026-03-19T13:03:58.846423",
+    "timestamp": "2026-03-19T13:03:58.853004"
   }
 ]

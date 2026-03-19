@@ -14,8 +14,15 @@ from datetime import date, datetime, timedelta
 
 print("[IMPORT] Loading Flask and basic modules...")
 
+# Load environment variables FIRST before importing src modules
+load_dotenv()
+print("[SETUP] Environment variables loaded from .env")
+
 # Import src modules
-from src.collect_pollen import collect_daily_pollen, get_latest_pollen_data, get_pollen_history
+from src.collect_pollen import (
+    collect_daily_pollen, get_latest_forecast, get_pollen_history, 
+    get_forecast, get_legacy_pollen_data, test_api_connection
+)
 from src.collect_symptoms import log_symptoms, get_symptoms_for_date, get_latest_symptoms
 from src.build_dataset import build_dataset
 from src.train_model import train_model
@@ -25,12 +32,10 @@ from src.utils import read_json, write_json, ensure_data_dir, calculate_allergen
 
 print("[IMPORT] All src modules loaded successfully")
 
-# Load environment variables
-load_dotenv()
-
 print("[SETUP] Creating Flask app...")
 app = Flask(__name__)
 CORS(app)
+
 
 print("[SETUP] Ensuring data directories...")
 ensure_data_dir()
@@ -39,6 +44,38 @@ print("[SETUP] Flask app created and configured")
 
 # ============ API ENDPOINTS ============
 
+@app.route('/api/health', methods=['GET'])
+def health_check():
+    """Health check endpoint with API diagnostics"""
+    try:
+        api_key_set = os.getenv("GOOGLE_POLLEN_API_KEY") is not None
+        pollen_forecast = get_latest_forecast() is not None
+        
+        return jsonify({
+            'status': 'ok',
+            'api_key_configured': api_key_set,
+            'forecast_cached': pollen_forecast,
+            'timestamp': datetime.now().isoformat()
+        })
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+@app.route('/api/diagnostics/test-api', methods=['GET'])
+def test_api_endpoint():
+    """Test Google Pollen API connection and provide diagnostics"""
+    try:
+        result = test_api_connection()
+        
+        if result['status'] == 'success':
+            return jsonify(result), 200
+        else:
+            return jsonify(result), 400
+    except Exception as e:
+        return jsonify({
+            'status': 'error',
+            'message': f'Diagnostic test failed: {str(e)}'
+        }), 500
+
 @app.route('/')
 def index():
     """Serve dashboard HTML"""
@@ -46,17 +83,28 @@ def index():
 
 @app.route('/api/pollen/current', methods=['GET'])
 def get_current_pollen():
-    """Get current pollen forecast"""
+    """Get current/latest pollen forecast"""
     try:
-        days = request.args.get('days', 7, type=int)
-        data = get_pollen_history(days=min(days, 30))
+        days = request.args.get('days', 5, type=int)
+        data = get_forecast(days=min(days, 5))
         
         if not data:
-            return jsonify({'status': 'error', 'message': 'No pollen data available'}), 404
+            # If no forecast data, try to fetch it
+            try:
+                print("No cached forecast found. Attempting to fetch...")
+                api_data, collected = collect_daily_pollen(lat=38.9072, lng=-77.0369, days=5, skip_if_exists=False)
+                data = get_forecast(days=min(days, 5))
+            except Exception as fetch_err:
+                print(f"Failed to auto-fetch pollen data: {fetch_err}")
+                return jsonify({
+                    'status': 'error',
+                    'message': 'No pollen forecast available. Please fetch data using /api/pollen/fetch'
+                }), 400
         
         return jsonify({
             'status': 'success',
-            'data': data[-1] if isinstance(data, list) else data
+            'type': 'forecast',
+            'data': data
         })
     except Exception as e:
         print(f"Error in /api/pollen/current: {e}")
@@ -64,17 +112,38 @@ def get_current_pollen():
 
 @app.route('/api/pollen/history', methods=['GET'])
 def get_pollen_history_endpoint():
-    """Get pollen history for N days"""
+    """Get actual pollen data history for N days"""
     try:
         days = request.args.get('days', 30, type=int)
-        data = get_pollen_history(days=min(days, 60))
+        data = get_pollen_history(days=min(days, 90))
         
         return jsonify({
             'status': 'success',
+            'type': 'history',
             'data': data if isinstance(data, list) else [data]
         })
     except Exception as e:
         print(f"Error in /api/pollen/history: {e}")
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+@app.route('/api/pollen/forecast', methods=['GET'])
+def get_pollen_forecast_endpoint():
+    """Get 5-day pollen forecast"""
+    try:
+        days = request.args.get('days', 5, type=int)
+        data = get_forecast(days=min(days, 5))
+        
+        if not data:
+            return jsonify({'status': 'error', 'message': 'No pollen forecast available'}), 404
+        
+        return jsonify({
+            'status': 'success',
+            'type': 'forecast',
+            'forecast_period_days': len(data.get('dailyInfo', [])),
+            'data': data
+        })
+    except Exception as e:
+        print(f"Error in /api/pollen/forecast: {e}")
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
 @app.route('/api/pollen/fetch', methods=['POST'])
@@ -109,15 +178,22 @@ def fetch_pollen():
 def get_forecast_summary():
     """Get 5-day pollen forecast with treatment recommendations"""
     try:
-        latest_data = get_latest_pollen_data()
+        latest_forecast = get_latest_forecast()
         
-        if not latest_data:
-            return jsonify({
-                'status': 'error',
-                'message': 'No forecast data available. Fetch pollen data first.'
-            }), 400
+        if not latest_forecast:
+            # Try to auto-fetch if no data exists
+            try:
+                print("No cached forecast found. Attempting to fetch...")
+                api_data, collected = collect_daily_pollen(lat=38.9072, lng=-77.0369, days=5, skip_if_exists=False)
+                latest_forecast = get_latest_forecast()
+            except Exception as fetch_err:
+                print(f"Failed to auto-fetch pollen data: {fetch_err}")
+                return jsonify({
+                    'status': 'error',
+                    'message': 'No forecast data available. Please fetch pollen data first using /api/pollen/fetch'
+                }), 400
         
-        forecast = build_forecast_summary(latest_data, days_ahead=5)
+        forecast = build_forecast_summary(latest_forecast, days_ahead=5)
         
         return jsonify({
             'status': 'success',
@@ -131,15 +207,24 @@ def get_forecast_summary():
 def get_critical_forecast_days():
     """Get days with concerning pollen levels"""
     try:
-        latest_data = get_latest_pollen_data()
+        latest_forecast = get_latest_forecast()
         
-        if not latest_data:
-            return jsonify({
-                'status': 'error',
-                'message': 'No forecast data available'
-            }), 400
+        if not latest_forecast:
+            # Try to auto-fetch if no data exists
+            try:
+                print("No cached forecast found. Attempting to fetch...")
+                api_data, collected = collect_daily_pollen(lat=38.9072, lng=-77.0369, days=5, skip_if_exists=False)
+                latest_forecast = get_latest_forecast()
+            except Exception as fetch_err:
+                print(f"Failed to auto-fetch pollen data: {fetch_err}")
+                return jsonify({
+                    'status': 'success',
+                    'critical_days': [],
+                    'count': 0,
+                    'message': 'No forecast data available yet'
+                })
         
-        forecast = build_forecast_summary(latest_data, days_ahead=5)
+        forecast = build_forecast_summary(latest_forecast, days_ahead=5)
         critical = get_critical_days(forecast, threshold=2)
         
         return jsonify({
@@ -155,15 +240,22 @@ def get_critical_forecast_days():
 def get_forecast_preparations():
     """Get advance preparation recommendations for upcoming pollen period"""
     try:
-        latest_data = get_latest_pollen_data()
+        latest_forecast = get_latest_forecast()
         
-        if not latest_data:
-            return jsonify({
-                'status': 'error',
-                'message': 'No forecast data available'
-            }), 400
+        if not latest_forecast:
+            # Try to auto-fetch if no data exists
+            try:
+                print("No cached forecast found. Attempting to fetch...")
+                api_data, collected = collect_daily_pollen(lat=38.9072, lng=-77.0369, days=5, skip_if_exists=False)
+                latest_forecast = get_latest_forecast()
+            except Exception as fetch_err:
+                print(f"Failed to auto-fetch pollen data: {fetch_err}")
+                return jsonify({
+                    'status': 'error',
+                    'message': 'No forecast data available. Please fetch pollen data first using /api/pollen/fetch'
+                }), 400
         
-        forecast = build_forecast_summary(latest_data, days_ahead=5)
+        forecast = build_forecast_summary(latest_forecast, days_ahead=5)
         preps = get_preparation_recommendations(forecast)
         schedule = format_treatment_schedule(forecast)
         
@@ -180,15 +272,15 @@ def get_forecast_preparations():
 def get_daily_forecast(date_str):
     """Get detailed forecast and recommendations for a specific date"""
     try:
-        latest_data = get_latest_pollen_data()
+        latest_forecast = get_latest_forecast()
         
-        if not latest_data:
+        if not latest_forecast:
             return jsonify({
                 'status': 'error',
                 'message': 'No forecast data available'
             }), 400
         
-        forecast = build_forecast_summary(latest_data, days_ahead=5)
+        forecast = build_forecast_summary(latest_forecast, days_ahead=5)
         
         # Find the day in forecast
         day_data = None
@@ -268,6 +360,21 @@ def get_symptoms_history():
         print(f"Error in /api/symptoms/history: {e}")
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
+@app.route('/api/symptoms/recent', methods=['GET'])
+def get_symptoms_recent():
+    """Get recent symptom data (frontend compatibility endpoint)"""
+    try:
+        days = request.args.get('days', 7, type=int)
+        data = get_latest_symptoms(days=min(days, 90))
+        
+        return jsonify({
+            'status': 'success',
+            'symptoms': data
+        })
+    except Exception as e:
+        print(f"Error in /api/symptoms/recent: {e}")
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
 @app.route('/api/overview/stats', methods=['GET'])
 def get_overview():
     """Get dashboard overview statistics"""
@@ -275,7 +382,7 @@ def get_overview():
         today = str(date.today())
         today_symptoms = get_symptoms_for_date(today)
         week_symptoms = get_latest_symptoms(days=7)
-        pollen_data = get_pollen_history(days=1)
+        history_data = get_pollen_history(days=1)
         
         # Calculate average severity
         avg_severity = None
@@ -287,10 +394,37 @@ def get_overview():
             'status': 'success',
             'today_symptoms': len(today_symptoms),
             'average_severity': avg_severity,
-            'pollen_records': len(pollen_data) if pollen_data else 0
+            'historical_records': len(history_data) if history_data else 0,
+            'forecast_available': get_latest_forecast() is not None
         })
     except Exception as e:
         print(f"Error in /api/overview/stats: {e}")
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+@app.route('/api/dashboard/overview', methods=['GET'])
+def get_dashboard_overview():
+    """Get dashboard overview statistics (frontend compatibility endpoint)"""
+    try:
+        today = str(date.today())
+        today_symptoms = get_symptoms_for_date(today)
+        week_symptoms = get_latest_symptoms(days=7)
+        history_data = get_pollen_history(days=7)
+        
+        # Calculate average severity
+        avg_severity = None
+        if week_symptoms:
+            total = sum(s.get('severity', 0) for s in week_symptoms)
+            avg_severity = total / len(week_symptoms)
+        
+        return jsonify({
+            'status': 'success',
+            'recent_symptoms_count': len(today_symptoms),
+            'average_severity': avg_severity,
+            'pollen_records': len(history_data) if history_data else 0,
+            'forecast_available': get_latest_forecast() is not None
+        })
+    except Exception as e:
+        print(f"Error in /api/dashboard/overview: {e}")
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
 @app.route('/api/model/train', methods=['POST'])
@@ -340,13 +474,13 @@ def get_model_status():
 
 @app.route('/api/predict/symptoms', methods=['POST'])
 def predict_endpoint():
-    """Predict symptoms based on pollen data"""
+    """Predict symptoms based on pollen forecast"""
     try:
         data = request.json or {}
         pollen_forecast = data.get('forecast')
         
         if not pollen_forecast:
-            latest = get_latest_pollen_data()
+            latest = get_latest_forecast()
             pollen_forecast = latest
         
         prediction = predict_symptoms(pollen_forecast)
@@ -363,32 +497,64 @@ def predict_endpoint():
 def get_allergen_profile():
     """Get personal allergen profile based on trained model"""
     try:
-        profile = calculate_allergen_profile()
+        pollen_history = get_pollen_history(days=90)
+        symptom_history = get_latest_symptoms(days=90)
         
-        if not profile:
+        if not pollen_history or not symptom_history:
             return jsonify({
-                'status': 'error',
-                'message': 'Model not trained yet. Collect more data first.'
-            }), 400
+                'status': 'success',
+                'data': {},
+                'message': 'Insufficient historical data to calculate profile. Collect more data to generate allergen profile.'
+            })
+        
+        profile = calculate_allergen_profile(pollen_history, symptom_history)
         
         return jsonify({
             'status': 'success',
-            'data': profile
+            'data': profile if profile else {}
         })
     except Exception as e:
         print(f"Error in /api/analysis/profile: {e}")
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
+@app.route('/api/allergen-profile', methods=['GET'])
+def get_allergen_profile_compat():
+    """Get personal allergen profile (frontend compatibility endpoint)"""
+    try:
+        pollen_history = get_pollen_history(days=90)
+        symptom_history = get_latest_symptoms(days=90)
+        
+        if not pollen_history or not symptom_history:
+            return jsonify({
+                'status': 'success',
+                'profile': {},
+                'message': 'Insufficient historical data to calculate profile. Collect more data to generate allergen profile.'
+            })
+        
+        profile = calculate_allergen_profile(pollen_history, symptom_history)
+        
+        return jsonify({
+            'status': 'success',
+            'profile': profile if profile else {}
+        })
+    except Exception as e:
+        print(f"Error in /api/allergen-profile: {e}")
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
 @app.route('/api/data/export', methods=['GET'])
 def export_data():
-    """Export all collected data"""
+    """Export all collected data (forecast, history, and symptoms)"""
     try:
-        pollen_data = read_json('data/my_pollen.json')
+        forecast_data = read_json('data/pollen_forecast.json')
+        history_data = read_json('data/pollen_history.json')
+        legacy_data = read_json('data/my_pollen.json')  # For reference
         symptoms_data = read_json('data/symptoms.json')
         
         return jsonify({
             'status': 'success',
-            'pollen': pollen_data,
+            'forecast': forecast_data,
+            'history': history_data,
+            'legacy': legacy_data,
             'symptoms': symptoms_data
         })
     except Exception as e:
@@ -407,6 +573,8 @@ def clear_data():
                 'message': 'Confirmation required to clear data'
             }), 400
         
+        write_json('data/pollen_forecast.json', {})
+        write_json('data/pollen_history.json', [])
         write_json('data/my_pollen.json', [])
         write_json('data/symptoms.json', [])
         

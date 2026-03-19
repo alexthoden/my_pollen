@@ -374,8 +374,17 @@ def get_preparation_recommendations(forecast_summary):
     Returns:
         dict: Preparation steps and timeline
     """
+    if not forecast_summary or 'days' not in forecast_summary:
+        return {
+            'advance_prep': [],
+            'critical_days': 0,
+            'max_forecast_severity': 0,
+            'status': 'error',
+            'message': 'No forecast data available'
+        }
+    
     critical_days = get_critical_days(forecast_summary, threshold=2)
-    max_severity = max([d['severity'] for d in forecast_summary['days']], default=0)
+    max_severity = max([d['severity'] for d in forecast_summary.get('days', [])], default=0)
     
     recommendations = {
         'advance_prep': [],

@@ -141,16 +141,36 @@ async function loadTodayReports() {
 }
 
 async function loadPollenData() {
-    const data = await apiCall('/pollen/current?days=1');
-    if (data) {
-        appState.pollenData = data;
-        renderPollenChart(data);
-        renderPollenRecords(data);
+    const response = await apiCall('/pollen/current?days=1');
+    if (response && response.data) {
+        // Extract the actual forecast data from the response wrapper
+        appState.pollenData = response.data;
+        renderPollenChart(response.data);
+        renderPollenRecords(response.data);
     }
 }
 
 function renderPollenChart(pollenData) {
-    if (!pollenData.dailyInfo || pollenData.dailyInfo.length === 0) return;
+    if (!pollenData || !pollenData.dailyInfo || pollenData.dailyInfo.length === 0) {
+        console.error('No valid pollen data for chart:', pollenData);
+        // Display empty chart message
+        const layout = {
+            title: 'Pollen Levels Over Time',
+            xaxis: { title: 'Date' },
+            yaxis: { title: 'Index Value' },
+            annotations: [{
+                text: 'No pollen data available',
+                xref: 'paper',
+                yref: 'paper',
+                x: 0.5,
+                y: 0.5,
+                showarrow: false,
+                font: { size: 20, color: '#999' }
+            }]
+        };
+        Plotly.newPlot('pollen-chart', [], layout, { responsive: true, displayModeBar: false });
+        return;
+    }
     
     // Define robust color palettes for each pollen type (no whites, no transparency > 50%, max contrast)
     const typeColorPalettes = {
@@ -699,23 +719,34 @@ async function loadForecast() {
 }
 
 function displayForecast(forecast, preparations, schedule) {
+    // Validate forecast data structure
+    if (!forecast || !forecast.days || !Array.isArray(forecast.days)) {
+        document.getElementById('forecast-empty').style.display = 'block';
+        console.error('Invalid forecast data structure:', forecast);
+        return;
+    }
+    
     // Hide empty message
     document.getElementById('forecast-empty').style.display = 'none';
     
     // Display critical days alert
-    const criticalDays = forecast.days.filter(d => d.severity >= 2);
+    const criticalDays = (forecast.days || []).filter(d => d && d.severity >= 2);
     if (criticalDays.length > 0) {
         displayCriticalDays(criticalDays);
     }
     
     // Display preparation timeline
-    displayPreparations(preparations);
+    if (preparations && Array.isArray(preparations.advance_prep)) {
+        displayPreparations(preparations);
+    }
     
     // Display daily forecasts with treatments
-    displayDailyForecasts(forecast.days);
+    displayDailyForecasts(forecast.days || []);
     
     // Display treatment schedule
-    displayTreatmentSchedule(schedule);
+    if (schedule && typeof schedule === 'object') {
+        displayTreatmentSchedule(schedule);
+    }
 }
 
 function displayCriticalDays(criticalDays) {

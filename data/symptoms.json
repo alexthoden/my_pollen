@@ -3,6 +3,14 @@
     "date": "2026-03-18",
     "period": "afternoon",
     "severity": 1,
-    "notes": ""
+    "notes": "",
+    "location": "Washington, DC"
+  },
+  {
+    "date": "2026-03-19",
+    "period": "morning",
+    "severity": 0,
+    "notes": "",
+    "location": "Washington, DC"
   }
 ]

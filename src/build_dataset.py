@@ -4,8 +4,23 @@ from datetime import datetime
 from src.utils import read_json
 
 def load_pollen():
-    """Load pollen data from JSON file."""
-    data = read_json("data/my_pollen.json")
+    """
+    Load pollen history data from JSON file.
+    Uses the historical pollen data (actual pollen that occurred).
+    Falls back to legacy my_pollen.json if history file doesn't exist.
+    """
+    # Try to load from history first (new structure)
+    data = read_json("data/pollen_history.json")
+    
+    # If history is empty or doesn't exist, fall back to legacy file
+    if not data:
+        print("Warning: No pollen history found. Attempting to load from legacy file...")
+        # Load legacy data and convert to history format
+        legacy_data = read_json("data/my_pollen.json")
+        if legacy_data:
+            print(f"Found {len(legacy_data)} entries in legacy file. Using for dataset building...")
+        return legacy_data
+    
     return data
 
 def load_symptoms():
@@ -17,12 +32,56 @@ def format_pollen_date(date_dict):
     """Convert date dict from API to string format."""
     if isinstance(date_dict, dict):
         return f"{date_dict['year']}-{date_dict['month']:02d}-{date_dict['day']:02d}"
+    elif isinstance(date_dict, str):
+        # Already in string format (from history file)
+        return date_dict
     return str(date_dict)
+
+def extract_pollen_from_history_entry(entry):
+    """
+    Extract pollen data from a history entry.
+    Handles both new history format and legacy format.
+    """
+    # New history format
+    if entry.get("type") == "actual" and entry.get("dailyInfo"):
+        daily_info = entry.get("dailyInfo", {})
+        date_dict = daily_info.get("date", {})
+        date_str = format_pollen_date(date_dict)
+        
+        row = {"date": date_str}
+        for ptype in daily_info.get("pollenTypeInfo", []):
+            display_name = ptype.get("displayName", "Unknown")
+            if "indexInfo" in ptype:
+                value = ptype["indexInfo"].get("value", 0)
+                row[display_name] = value
+        
+        return row if len(row) > 1 else None
+    
+    # Legacy format (for backward compatibility)
+    try:
+        daily_info = entry.get("dailyInfo", [])
+        if not daily_info:
+            return None
+        
+        date_dict = daily_info[0].get("date", {})
+        date_str = format_pollen_date(date_dict)
+        
+        row = {"date": date_str}
+        for ptype in daily_info[0].get("pollenTypeInfo", []):
+            display_name = ptype.get("displayName", "Unknown")
+            if "indexInfo" in ptype:
+                value = ptype["indexInfo"].get("value", 0)
+                row[display_name] = value
+        
+        return row if len(row) > 1 else None
+    except (KeyError, IndexError, TypeError):
+        return None
 
 def build_dataset():
     """
     Build training dataset from pollen and symptom data.
     Merges pollen levels with reported symptoms by date.
+    Uses historical pollen data (actual pollen that occurred).
     
     Returns:
         True if dataset was built successfully, False otherwise
@@ -39,22 +98,8 @@ def build_dataset():
         pollen_rows = []
         for entry in pollen_data:
             try:
-                daily_info = entry.get("dailyInfo", [])
-                if not daily_info:
-                    continue
-                
-                date_dict = daily_info[0].get("date", {})
-                date_str = format_pollen_date(date_dict)
-                
-                # Extract pollen types for this day
-                row = {"date": date_str}
-                for ptype in daily_info[0].get("pollenTypeInfo", []):
-                    display_name = ptype.get("displayName", "Unknown")
-                    if "indexInfo" in ptype:
-                        value = ptype["indexInfo"].get("value", 0)
-                        row[display_name] = value
-                
-                if len(row) > 1:  # Only add if we have pollen data
+                row = extract_pollen_from_history_entry(entry)
+                if row and len(row) > 1:  # Only add if we have pollen data
                     pollen_rows.append(row)
             except (KeyError, IndexError, TypeError) as e:
                 print(f"Error processing pollen entry: {e}")
@@ -107,7 +152,7 @@ def build_dataset():
         
         # Save dataset
         df.to_csv("data/dataset.csv", index=False)
-        print(f"Dataset built successfully: {len(df)} records")
+        print(f"Dataset built successfully: {len(df)} records using historical pollen data")
         return True
         
     except Exception as e:
